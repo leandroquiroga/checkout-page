@@ -1,60 +1,103 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Confirmacion de datos, compra de producto">
-        <meta name="author" content="Leandro Quiroga Developer Frontedn Jr">
-        <title>Checkout</title>
-        <!-- CSS -->
-        <link rel="stylesheet" href="css/styles.css">
-        <!-- Font Awesome CDN -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Confirmacion de datos, compra de producto">
+    <meta name="author" content="Leandro Quiroga Developer Frontedn Jr">
+    <title>Checkout</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
 
-    <body>
-        <!-- Cuerpo principal -->
-        <div class="general">
+<body>
+    <!-- Cuerpo principal -->
+    <div class="general">
 
-            <header class="title">
-                <h1>Checkout</h1>
-            </header>
+        <header class="title">
+            <h1>Checkout</h1>
+        </header>
 
-            <main class="begin">
-                <!-- Inputs -->
-                <section class="info-input">
+        <main class="begin">
+            <!-- Inputs -->
+            <section class="info-input">
+                <article class="description">
                     <!-- Contact-->
                     <h3 class="subtitle-info">Contact information</h3>
-                    
                     <!-- Inputs info-->
-                    <div class="description">
-                        <form class="input-one">
-                            <label for="femail">E-mail</label><br>
-                            <input type="email" id="femail" name="femail" class="icon-placeholder" placeholder="      Enter your email..."><br>
-                            
-                            <label for="fphone">Phone</label><br>
-                            <input type="tel" id="fphone" name="fphone" min="8" max="10" class="icon-placeholder" placeholder="      Enter your phone..."> 
-                        </form>
-                    </div>
-                    <article>
+                    <form class="input">
+                        <label for="femail">E-mail</label><br>
+                        <input type="email" id="femail" name="femail" class="icon-placeholder"
+                            placeholder="      Enter your email..."><br>
 
-                    </article>
-                </section>
+                        <label for="fphone">Phone</label><br>
+                        <input type="tel" id="fphone" name="fphone" min="8" max="10" class="icon-placeholder"
+                            placeholder="      Enter your phone...">
+                    </form>
+                </article>
+                    <!-- Shipping address-->
+                <article class="shipping">
+                    <h3 class="subtitle-info">Shipping address</h3>
+                    <!-- Inputs info-->
+                    <form class="input">
+                        <label for="fname">Full Name</label><br>
+                        <input type="name" id="fname" name="fname" class="icon-placeholder" placeholder="       Enter your full name..."><br>
 
-                <!-- Total price -->
-                <section class="info-ouput">
-                    Chau
-                </section>
-            </main>
+                        <label for="faddres">Address</label><br>
+                        <input type="text" id="faddres" name="faddres" class="icon-placeholder" placeholder="      Enter your address..."><br>
+                    
+                        <label for="fcity">City</label><br>
+                        <input type="text" id="fcity" name="fcity" class="icon-placeholder" placeholder="      Enter your city...">
+                    </form>
+                </article>
 
-        </div>
+                <article class="info">
+                    <form class="input ">
+                        <label for="fcountry">Country</label><br>
+                        <select id="fcountry" name="fcountry" class="icon-placeholder">
+                            <option disabled selected value="fcountry">  Enter your country...</option>
+                            <option value="Italy">Italy</option>
+                            <option value="EEUU">EEUU</option>
+                            <option value="Germany">Germany</option>
+                            <option value="France">France</option>
+                        </select>
+                    </form>
 
-        <!-- Pie de pagina -->
-        <footer class="pie-pagina">
+                    <form class="input ">
+                        <label for="fcode">Code Postal</label><br>
+                        <input type="text" id="fcode" name="fcode" class="icon-placeholder" placeholder="    Your postal code..."><br>  
+                        
+                    </form>
+                    
+                </article>
 
-        </footer>
-    </body>
+                <article class="submit-check">
+                    <input type="checkbox" >
+                    <small class="text-help"> Save this information for next time </small>
+                </article>
+
+                <article class="boton">
+                    <button type="submit">Continue</button>
+                </article>
+                
+            </section>
+
+            <!-- Total price -->
+             <section class="info-ouput">
+                Chau
+            </section>
+        </main>
+
+    </div>
+
+    <!-- Pie de pagina -->
+    <footer class="pie-pagina">
+
+    </footer>
+</body>
 
 </html>
