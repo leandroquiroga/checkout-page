@@ -53,7 +53,7 @@ body{
 .general .begin .info-input{
     grid-column: 1/4;
     display: grid;
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(5, auto);
 }
 
 .general .begin .info-input .subtitle-info{
@@ -70,7 +70,10 @@ body{
 
 /* Style Inputs*/
 .general .begin .info-input .description input[type="email"],
-.general .begin .info-input .description input[type="tel"]{
+.general .begin .info-input .description input[type="tel"],
+.general .begin .info-input .shipping input[type="text"],
+.general .begin .info-input .shipping input[type="name"],
+.general .begin .info-input .info .icon-placeholder{
     width: 450px;
     height: 40px;
     border: none;
@@ -79,15 +82,87 @@ body{
     padding: 15px
 }
 /* Icon placeholder */
-.general .begin .info-input .description input::placeholder{
+.general .begin .info-input .description input::placeholder,
+.general .begin .info-input .shipping input::placeholder,
+.general .begin .info-input .info input::placeholder,
+.general .begin .info-input .info select:first-of-type{
     font-family: "Font Awesome 5 Free", 'Ubuntu', sans-serif; 
     font-weight: 900;
-    font-size: 17px;
-
+    font-size: 16px;
+    color: #5f5f5f;
 }
 
-.general .begin .info-input .description .input-one label{
+.general .begin .info-input .description .input label,
+.general .begin .info-input .shipping .input label,
+.general .begin .info-input .info .input label{
     font-size: 12px;
     color: #4F4F4F;
     font-weight: 500;
+}
+
+.general .begin .info-input .description,
+.general .begin .info-input .shipping{
+    margin: 15px 0 ;
+}
+
+/* Shipping*/
+.general .begin .info-input .shipping{
+    grid-row: 3/4;
+}
+
+.general .begin .info-input .info{
+    grid-row: 4;
+    display: flex;
+    flex-direction: row;
+    margin: -10px 0;
+}
+
+/* Shipping info*/
+
+.general .begin .info-input .info .icon-placeholder{
+    width: 220px;
+    padding: 0;
+}
+
+
+.general .begin .info-input .info .input:nth-of-type(2){
+    margin-left: 10px;
+}
+
+.general .begin .info-input .submit-check{
+    grid-row: 5;
+    margin: 15px 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Cursor */
+.general .begin .info-input .submit-check input[type="checkbox"],
+.general .begin .info-input .info select:first-of-type,
+.general .begin .info-input .boton button[type="submit"]{
+    cursor: pointer;
+}
+
+.general .begin .info-input .submit-check .text-help{
+    margin-left: 10px;
+    color: #4E5150;
+    font-size: 13px;
+}
+
+/* Boton */
+.general .begin .info-input .boton{
+    grid-row: 6;
+    display: flex;
+    justify-content: space-around;
+}
+
+.general .begin .info-input .boton button[type="submit"]{
+    width: 160px;
+    height: 45px;
+    border-radius: 15px;
+    border: none;
+    background-color: #F2994A;
+    color: #efefee;
+    font-size: 17px;
+    padding: 10px;
 }
