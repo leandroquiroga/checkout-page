@@ -1,0 +1,93 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #efefee;
+}
+
+.general{
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    width: 90%;
+    max-width: 1024px;
+    margin: 20px auto;
+    grid-gap: 15px;
+    border: 1px solid #000;
+}
+
+.general .title,
+.general .begin{
+    padding: 10px;
+    border: 1px solid #000;
+    margin: 0 25px;
+    grid-row: 1/2
+}
+
+/* Title*/
+.general .title h1{
+    font-size: 28px;
+    font-weight: 500;
+    color: #4E5150;
+}
+.general .begin{
+    grid-row: 2/4;
+}
+
+/* Main */
+
+.general .begin{
+    display: grid;
+    grid-template-rows: repeat(3,auto);
+    grid-template-columns: repeat(4,1fr);
+    
+}
+
+/* Inputs */
+.general .begin .info-input{
+    grid-column: 1/4;
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+}
+
+.general .begin .info-input .subtitle-info{
+    margin: 10px 0;
+    height: 25px;
+    font-size: 15px;
+    color: #333333; 
+}
+
+/* Input description */
+.general .begin .info-input .description{
+    grid-row: 2/3;
+}
+
+/* Style Inputs*/
+.general .begin .info-input .description input[type="email"],
+.general .begin .info-input .description input[type="tel"]{
+    width: 450px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    margin: 10px 0;
+    padding: 15px
+}
+/* Icon placeholder */
+.general .begin .info-input .description input::placeholder{
+    font-family: "Font Awesome 5 Free", 'Ubuntu', sans-serif; 
+    font-weight: 900;
+    font-size: 17px;
+
+}
+
+.general .begin .info-input .description .input-one label{
+    font-size: 12px;
+    color: #4F4F4F;
+    font-weight: 500;
+}
