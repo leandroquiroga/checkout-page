@@ -39,19 +39,22 @@
                             placeholder="      Enter your phone...">
                     </form>
                 </article>
-                    <!-- Shipping address-->
+                <!-- Shipping address-->
                 <article class="shipping">
                     <h3 class="subtitle-info">Shipping address</h3>
                     <!-- Inputs info-->
                     <form class="input">
                         <label for="fname">Full Name</label><br>
-                        <input type="name" id="fname" name="fname" class="icon-placeholder" placeholder="       Enter your full name..."><br>
+                        <input type="name" id="fname" name="fname" class="icon-placeholder"
+                            placeholder="       Enter your full name..."><br>
 
                         <label for="faddres">Address</label><br>
-                        <input type="text" id="faddres" name="faddres" class="icon-placeholder" placeholder="      Enter your address..."><br>
-                    
+                        <input type="text" id="faddres" name="faddres" class="icon-placeholder"
+                            placeholder="      Enter your address..."><br>
+
                         <label for="fcity">City</label><br>
-                        <input type="text" id="fcity" name="fcity" class="icon-placeholder" placeholder="      Enter your city...">
+                        <input type="text" id="fcity" name="fcity" class="icon-placeholder"
+                            placeholder="      Enter your city...">
                     </form>
                 </article>
 
@@ -69,49 +72,83 @@
 
                     <form class="input ">
                         <label for="fcode">Code Postal</label><br>
-                        <input type="text" id="fcode" name="fcode" class="icon-placeholder" placeholder="    Your postal code..."><br>  
-                        
+                        <input type="text" id="fcode" name="fcode" class="icon-placeholder"
+                            placeholder="    Your postal code..."><br>
+
                     </form>
-                    
+
                 </article>
 
                 <article class="submit-check">
-                    <input type="checkbox" >
+                    <input type="checkbox">
                     <small class="text-help"> Save this information for next time </small>
                 </article>
 
                 <article class="boton">
                     <button type="submit">Continue</button>
                 </article>
-                
+
             </section>
 
             <!-- Total price -->
-             <section class="info-ouput">
+            <section class="info-ouput">
                 <article class="box-info">
 
                     <div class="box cant">
-            
+
+                        <!-- Image -->
                         <div class="img-produc-uno">
                             <img src="image/assent/photo1.png" alt="product" title="producto 1" class="img">
                         </div>
 
+                        <!--Cantidades -->
+                        <div class="box-textHelp">
+                            <p class="text"> Vintage Backgab</p>
+                            <div class="price">
+                                <small class="finalPrice">XXX.XX</small>
+                                <small class="disconint">XXX.XX</small>
+                            </div>
 
+                            <!-- Boton -->
+                            <div class="boton-input-value">
+                                <button id="minus">-</button>
+                                <input class="quantity" min="0" name="quantity" value="1" type="number">
+                                <button id="plus">+</button>
+                            </div>
+                        </div>
+
+                        <!-- Image -->
                         <div class="img-produc-dos">
                             <img src="image/assent/photo2.png" alt="product" title="producto 2" class="img">
+                        </div>
+
+                        <!--Cantidades -->
+                        <div class="box-textHelp-dos">
+                            <p class="text"> Levis Shoes</p>
+                            <div class="price">
+                                <small class="finalPrice">XXX.XX</small>
+                                <small class="disconint">XXX.XX</small>
+                            </div>
+
+                            <!-- Boton -->
+                            <div class="boton-input-value">
+                                <button id="neg">-</button>
+                                <input class="quantity" min="0" name="quantity" value="1" type="number">
+                                <button id="add">+</button>
+                            </div>
                         </div>
                     </div>
 
                     <div class="box price">
-                        <div class="costo-envio">
-                            <h4 class="title-costo">Shipping</h4>
-                            <p id="envio">XXXX</p>
-                        </div>     
-                        
-                        <div class="costo-total">
-                            <h4 class="title-costo">Total</h4>
-                            <p id="total">XXXX</p>
-                        </div>   
+                            <div class="costo-envio">
+                                <h4 class="title-costo">Shipping</h4>
+                                <p id="envio">XXXX</p>
+                            </div>
+
+                            <div class="costo-total">
+                                <h4 class="title-costo">Total</h4>
+                                <p id="total">XXXX</p>
+                            </div>
                     </div>
 
                 </article>
@@ -124,6 +161,8 @@
     <footer class="pie-pagina">
 
     </footer>
+
+    <script src="js/index.js"></script>
 </body>
 
 </html>
