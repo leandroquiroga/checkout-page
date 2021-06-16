@@ -41,15 +41,13 @@ body{
     display: grid;
     grid-row: 2/4;
     grid-template-rows: repeat(3,auto);
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(5, auto);
     
 }
 
 /* Inputs */
 .general .begin .info-input{
     grid-column: 1/3;
-    display: grid;
-    grid-template-rows: repeat(5, auto);
 }
 
 .general .begin .info-input .subtitle-info{
@@ -60,28 +58,46 @@ body{
 }
 
 /* Input description */
-.general .begin .info-input .description{
+.general .begin .info-input .input{
     grid-row: 2/3;
+
 }
 
 /* Style Inputs*/
-.general .begin .info-input .description input[type="email"],
-.general .begin .info-input .description input[type="tel"],
-.general .begin .info-input .shipping input[type="text"],
-.general .begin .info-input .shipping input[type="name"],
-.general .begin .info-input .info .icon-placeholder{
+.general .begin .info-input  input[type="email"],
+.general .begin .info-input  input[type="tel"],
+.general .begin .info-input  input[type="text"],
+.general .begin .info-input  input[type="name"],
+.general .begin .info-input  .icon-placeholder{
     width: 450px;
     height: 40px;
     border: none;
     border-radius: 20px;
     margin: 10px 0;
-    padding: 15px
+    padding: 10px;
 }
+.general .begin .info-input .input .cuntro{
+    display: inline-grid;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: 0px;
+    width: 450px;
+}
+.general .begin .info-input .input .cuntro label .icon-placeholder{
+    grid-column: 1;
+}
+.general .begin .info-input .input .cuntro label input[type="number"]{
+    grid-column: 2;
+}
+.general .begin .info-input .input .cuntro input[type="number"],
+.general .begin .info-input .input .cuntro .icon-placeholder{
+    width: 225px;
+}
+
 /* Icon placeholder */
-.general .begin .info-input .description input::placeholder,
-.general .begin .info-input .shipping input::placeholder,
-.general .begin .info-input .info input::placeholder,
-.general .begin .info-input .info select:first-of-type{
+.general .begin .info-input input::placeholder,
+.general .begin .info-input input::placeholder,
+.general .begin .info-input input::placeholder,
+.general .begin .info-input select:first-of-type{
     font-family: "Font Awesome 5 Free", 'Ubuntu', sans-serif; 
     font-weight: 900;
     font-size: 16px;
@@ -146,13 +162,23 @@ body{
 }
 
 /* Boton */
-.general .begin .info-input .boton{
+.general .begin .info-input .check{
     grid-row: 6;
     display: flex;
-    justify-content: flex-end;
+    align-items:flex-start;
+    margin: 5px 0;
+}
+.general .begin .info-input input[type="checkbox"],
+.general .begin .info-input .check .text-help{
+    margin: 5px;
 }
 
-.general .begin .info-input .boton button[type="submit"]{
+
+.general .begin .info-input .boton{
+    display: flex;
+    justify-content:flex-end;
+}
+.general .begin .info-input .boton input[type="submit"]{
     width: 160px;
     height: 45px;
     border-radius: 15px;
@@ -166,7 +192,7 @@ body{
 /* Total price */
 
 .general .begin .info-ouput{
-    grid-column: 3/5;
+    grid-column: 5/6;
     display: grid;
     grid-template-rows: repeat(3, auto);
     padding: 10px;
@@ -175,18 +201,18 @@ body{
 
 
 .general .begin .info-ouput .box-info{
-    grid-row: 1/3;
-    width: 85%;
+    grid-row: 1;
+    width: 100%;
     padding: 15px;
     border: 1px solid #32afe9;
     background-color: #e0e0e0ce;
     display: grid;
     grid-template-rows: repeat(4, auto);
     grid-gap: 35px;
-    place-items: center;
+    place-content: center;
 }
 .general .begin .info-ouput .box{
-    width: 90%;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3,auto);
     grid-template-rows: repeat(3,auto);
@@ -264,13 +290,13 @@ body{
 
 
 .general .begin .info-ouput .box-info .box.cant .box-textHelp .finalPrice,
-.general .begin .info-ouput .box-info .box.cant .box-textHelp-dos .finalPrice{
+.general .begin .info-ouput .box-info .box.cant .box-textHelp-dos .finalPrice2{
     font-size: 12px;
     color: #F2994A;
 }
 
 .general .begin .info-ouput .box-info .box.cant .box-textHelp .disconint,
-.general .begin .info-ouput .box-info .box.cant .box-textHelp-dos .disconint{
+.general .begin .info-ouput .box-info .box.cant .box-textHelp-dos .disconint2{
     font-size: 10px;
     color:#4F4F4F;
     text-decoration: line-through;
@@ -308,4 +334,31 @@ body{
 
 .box-textHelp-dos{
     grid-row: 2;
+}
+
+
+/* Responsive */
+@media only screen and (max-width: 986px){
+    .general{
+        margin: 0 15px;
+    }
+
+    .general .begin{
+        justify-content: center;
+    }
+    .general .begin .info-ouput{
+        grid-row: 1/2;
+        grid-column: 1/3;
+    }
+    .general .begin .info-input{
+        grid-row: 3/3;
+        grid-column: 1;
+    }
+    .general .begin .info-input .input  input[type="email"], 
+    .general .begin .info-input .input  input[type="tel"], 
+    .general .begin .info-input .input  input[type="text"], 
+    .general .begin .info-input .input  input[type="name"],
+    .general .begin .info-input .input .cuntro  {
+        width: 100%;
+    }
 }
