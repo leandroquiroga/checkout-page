@@ -23,6 +23,7 @@
         </header>
 
         <main class="begin">
+
             <!-- Inputs -->
             <section class="info-input">
                 <article class="description">
@@ -31,21 +32,18 @@
                     <!-- Inputs info-->
                     <form class="input">
                         <label for="femail">E-mail</label><br>
-                        <input type="email" id="femail" name="femail" class="icon-placeholder"
+                        <input type="email" pattern="[email]{1,100}" title="Por favor ingrese un email valido"
+                            id="femail" name="femail" class="icon-placeholder"
                             placeholder="      Enter your email..."><br>
 
                         <label for="fphone">Phone</label><br>
-                        <input type="tel" id="fphone" name="fphone" min="8" max="10" class="icon-placeholder"
+                        <input type="tel" id="fphone" name="fphone" pattern=".{8,10}" class="icon-placeholder"
                             placeholder="      Enter your phone...">
-                    </form>
-                </article>
-                <!-- Shipping address-->
-                <article class="shipping">
-                    <h3 class="subtitle-info">Shipping address</h3>
-                    <!-- Inputs info-->
-                    <form class="input">
+                        <!-- Shipping address-->
+                        <h3 class="subtitle-info">Shipping address</h3>
+                        <!-- Inputs info-->
                         <label for="fname">Full Name</label><br>
-                        <input type="name" id="fname" name="fname" class="icon-placeholder"
+                        <input type="name" id="fname" name="fname" pattern="[AZ-az]{2}" class="icon-placeholder"
                             placeholder="       Enter your full name..."><br>
 
                         <label for="faddres">Address</label><br>
@@ -54,43 +52,37 @@
 
                         <label for="fcity">City</label><br>
                         <input type="text" id="fcity" name="fcity" class="icon-placeholder"
-                            placeholder="      Enter your city...">
+                            placeholder="      Enter your city..."><br>
+                            
+                        <div class="cuntro"> <br>
+                            <label for="fcountry">Country
+
+                                <select id="fcountry" name="fcountry" class="icon-placeholder">
+                                    <option disabled selected>  Enter your country...</option>
+                                    <option value="Italy">Italy</option>
+                                    <option value="EEUU">EEUU</option>
+                                    <option value="Germany">Germany</option>
+                                    <option value="France">France</option>
+                                    <option value="Argentina">Argentina</option>
+                                </select>
+                            </label><br>
+                            
+
+                            <label for="fcode"> 
+                                Code Postal
+                                <input type="number" id="fcode" name="fcode" class="icon-placeholder"
+                                placeholder="    Your postal code..."><br>
+                            </label>         
+                        </div> <br>
+                        
+                        <div class="check">
+                            <input type="checkbox"><small class="text-help"> Save this information for next time </small>
+                        </div>
+                        <div class="boton">
+                            <input type="submit">
+                        </div>
                     </form>
-                </article>
-
-                <article class="info">
-                    <form class="input ">
-                        <label for="fcountry">Country</label><br>
-                        <select id="fcountry" name="fcountry" class="icon-placeholder">
-                            <option disabled selected>  Enter your country...</option>
-                            <option value="Italy">Italy</option>
-                            <option value="EEUU">EEUU</option>
-                            <option value="Germany">Germany</option>
-                            <option value="France">France</option>
-                            <option value="Argentina">Argentina</option>
-                        </select>
-                    </form>
-
-                    <form class="input ">
-                        <label for="fcode">Code Postal</label><br>
-                        <input type="text" id="fcode" name="fcode" class="icon-placeholder"
-                            placeholder="    Your postal code..."><br>
-
-                    </form>
-
-                </article>
-
-                <article class="submit-check">
-                    <input type="checkbox">
-                    <small class="text-help"> Save this information for next time </small>
-                </article>
-
-                <article class="boton">
-                    <button type="submit">Continue</button>
-                </article>
-
             </section>
-
             <!-- Total price -->
             <section class="info-ouput">
                 <article class="box-info">
@@ -106,14 +98,15 @@
                         <div class="box-textHelp">
                             <p class="text"> Vintage Backgab</p>
                             <div class="price">
-                                <small class="finalPrice">$0.00</small>
-                                <small class="disconint">$0.00</small>
+                                <small class="finalPrice">0.00</small>
+                                <small class="disconint">0.00</small>
                             </div>
 
                             <!-- Boton -->
                             <div class="boton-input-value">
                                 <button id="minus">-</button>
-                                <input class="quantity" id="value" min="0" max="4" value="0" name="quantity" type="number">
+                                <input class="quantity" id="value" min="0" max="4" value="0" name="quantity"
+                                    type="number">
                                 <button id="plus">+</button>
                             </div>
                         </div>
@@ -127,35 +120,37 @@
                         <div class="box-textHelp-dos">
                             <p class="text"> Levis Shoes</p>
                             <div class="price">
-                                <small class="finalPrice">$100.00</small>
-                                <small class="disconint">XXX.XX</small>
+                                <small class="finalPrice2">0.00</small>
+                                <small class="disconint2">0.00</small>
                             </div>
 
                             <!-- Boton -->
                             <div class="boton-input-value">
                                 <button id="neg">-</button>
-                                <input class="quantity" min="0" max="4" name="quantity" value="1" type="number">
+                                <input class="quantity" id="value" min="0" max="4" value="0" name="quantity"
+                                    type="number">
                                 <button id="add">+</button>
                             </div>
                         </div>
                     </div>
 
                     <div class="box price">
-                            <div class="costo-envio">
-                                <h4 class="title-costo">Shipping</h4>
-                                <p id="envio">$0.00</p>
-                            </div>
+                        <div class="costo-envio">
+                            <h4 class="title-costo">Shipping</h4>
+                            <p id="envio">0.00</p>
+                        </div>
 
-                            <div class="costo-total">
-                                <h4 class="title-costo">Total</h4>
-                                <p id="total">$0.00</p>
-                            </div>
+                        <div class="costo-total">
+                            <h4 class="title-costo">Total</h4>
+                            <p id="total">0.00</p>
+                        </div>
                     </div>
 
                 </article>
             </section>
-        </main>
 
+
+        </main>
     </div>
 
     <!-- Pie de pagina -->
@@ -163,7 +158,6 @@
 
     </footer>
 
-    <script src="js/index.js"></script>
 </body>
 
 </html>
