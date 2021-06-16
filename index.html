@@ -62,11 +62,12 @@
                     <form class="input ">
                         <label for="fcountry">Country</label><br>
                         <select id="fcountry" name="fcountry" class="icon-placeholder">
-                            <option disabled selected value="fcountry">  Enter your country...</option>
+                            <option disabled selected>  Enter your country...</option>
                             <option value="Italy">Italy</option>
                             <option value="EEUU">EEUU</option>
                             <option value="Germany">Germany</option>
                             <option value="France">France</option>
+                            <option value="Argentina">Argentina</option>
                         </select>
                     </form>
 
@@ -105,14 +106,14 @@
                         <div class="box-textHelp">
                             <p class="text"> Vintage Backgab</p>
                             <div class="price">
-                                <small class="finalPrice">XXX.XX</small>
-                                <small class="disconint">XXX.XX</small>
+                                <small class="finalPrice">$0.00</small>
+                                <small class="disconint">$0.00</small>
                             </div>
 
                             <!-- Boton -->
                             <div class="boton-input-value">
                                 <button id="minus">-</button>
-                                <input class="quantity" min="0" name="quantity" value="1" type="number">
+                                <input class="quantity" id="value" min="0" max="4" value="0" name="quantity" type="number">
                                 <button id="plus">+</button>
                             </div>
                         </div>
@@ -126,14 +127,14 @@
                         <div class="box-textHelp-dos">
                             <p class="text"> Levis Shoes</p>
                             <div class="price">
-                                <small class="finalPrice">XXX.XX</small>
+                                <small class="finalPrice">$100.00</small>
                                 <small class="disconint">XXX.XX</small>
                             </div>
 
                             <!-- Boton -->
                             <div class="boton-input-value">
                                 <button id="neg">-</button>
-                                <input class="quantity" min="0" name="quantity" value="1" type="number">
+                                <input class="quantity" min="0" max="4" name="quantity" value="1" type="number">
                                 <button id="add">+</button>
                             </div>
                         </div>
@@ -142,12 +143,12 @@
                     <div class="box price">
                             <div class="costo-envio">
                                 <h4 class="title-costo">Shipping</h4>
-                                <p id="envio">XXXX</p>
+                                <p id="envio">$0.00</p>
                             </div>
 
                             <div class="costo-total">
                                 <h4 class="title-costo">Total</h4>
-                                <p id="total">XXXX</p>
+                                <p id="total">$0.00</p>
                             </div>
                     </div>
 
